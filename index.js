@@ -48,7 +48,7 @@ const callApi = async (index) => {
 
 	const res = await fetch(url);
 	const json = await res.json();
-	const quizData = await json.results;
+	const quizData = json.results;
 	const quizInstance = new Quiz(quizData);
 	setQuiz(quizInstance, index);
 };
